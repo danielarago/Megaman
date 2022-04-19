@@ -5,6 +5,7 @@ using UnityEngine;
 public class StaticEnemy : MonoBehaviour
 {
     [SerializeField] int life;
+    [SerializeField] GameObject bullet;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,10 @@ public class StaticEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D ray = Physics2D.Raycast(transform.position, Vector2.down, 1.3f, LayerMask.GetMask("Ground"));
-        
+        RaycastHit2D ray = Physics2D.Raycast(transform.position, Vector2.left, 3.2f, LayerMask.GetMask("Player"));
+        if (ray == true)
+        {
+            Instantiate(bullet, transform.position, transform.rotation);
+        }
     }
 }
