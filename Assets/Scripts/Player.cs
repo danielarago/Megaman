@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public GameObject GetInstanceBullet()
+    /*public GameObject GetInstanceBullet()
     {
             return instanceBullet; 
     }
@@ -121,5 +121,5 @@ public class Player : MonoBehaviour
         {
             Destroy(BulletToDestroy);
         }
-    }
+    }*/
 }

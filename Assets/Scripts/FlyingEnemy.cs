@@ -20,6 +20,10 @@ public class FlyingEnemy : MonoBehaviour
     void Update()
     {
         ChasePlayer();
+        if (life == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void ChasePlayer()
@@ -42,8 +46,13 @@ public class FlyingEnemy : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, radius);
     }
 
-    public int GetLife()
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        return life;
+        GameObject collidedObject = collision.gameObject;
+        if (collidedObject.CompareTag("Bullet"))
+        {
+            Debug.Log("-1 a la vida de enemigo");
+            life--;
+        }
     }
 }

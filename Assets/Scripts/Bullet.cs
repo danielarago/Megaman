@@ -31,11 +31,7 @@ public class Bullet : MonoBehaviour
     public void BulletDestruction()
     {
         Debug.Log("Destrucción de bala");
-        GameObject instance = player.GetComponent<Player>().GetInstanceBullet();
-        if (instance != null)
-        {
-            GetComponent<Player>().DestroyInstanceBullet();
-        }
+        Destroy(gameObject);
 
     }
 }
