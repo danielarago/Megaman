@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1003659165922617343}
   - component: {fileID: 253779583675170687}
+  - component: {fileID: 4937348127343859278}
+  - component: {fileID: 172663077651545441}
   m_Layer: 0
   m_Name: StaticEnemy
   m_TagString: Untagged
@@ -84,3 +86,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4937348127343859278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8168919258048472630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b027bc37e4bd34eb687c9121bbbc41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 0
+  bullet: {fileID: 1346817489384303623, guid: bcbf7a44655ff0e408bc4c89ca4c0ee4, type: 3}
+--- !u!50 &172663077651545441
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8168919258048472630}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
