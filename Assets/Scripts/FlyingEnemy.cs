@@ -6,6 +6,7 @@ using Pathfinding;
 public class FlyingEnemy : MonoBehaviour
 {
     [SerializeField] GameObject player;
+    [SerializeField] int life;
     float radius = 5f;
     AIPath myPath;
 
@@ -23,13 +24,6 @@ public class FlyingEnemy : MonoBehaviour
 
     void ChasePlayer()
     {
-        /*float d = Vector2.Distance(transform.position, player.transform.position);
-        if (d > 8)
-        {
-
-        }
-        Debug.DrawRay(transform.position, player.transform.position, Color.blue);
-        */
 
         Collider2D detectPlayer = Physics2D.OverlapCircle(transform.position, radius, LayerMask.GetMask("Player"));
 
@@ -46,5 +40,10 @@ public class FlyingEnemy : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, radius);
+    }
+
+    public int GetLife()
+    {
+        return life;
     }
 }
