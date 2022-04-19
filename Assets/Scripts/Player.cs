@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] float JumpForce;
     [SerializeField] GameObject bullet;
     [SerializeField] float FireRate;
-    private GameObject instanceBullet;
+    public GameObject instanceBullet;
     private float AllowFire;
 
 
@@ -106,6 +106,20 @@ public class Player : MonoBehaviour
             Debug.Log("Esperando 4 segundos");
             yield return new WaitForSeconds(4);
             Debug.Log("Pasaron 4 segundos");
+        }
+    }
+
+    public GameObject GetInstanceBullet()
+    {
+            return instanceBullet; 
+    }
+
+    public void DestroyInstanceBullet()
+    {
+        GameObject BulletToDestroy = GetInstanceBullet();
+        if (BulletToDestroy != null)
+        {
+            Destroy(BulletToDestroy);
         }
     }
 }

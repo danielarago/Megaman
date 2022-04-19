@@ -5,12 +5,14 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     Rigidbody2D myBody;
+    Animator myAnim;
     [SerializeField] float BulletSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
         myBody = GetComponent<Rigidbody2D>();
+        myAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,7 +23,23 @@ public class Bullet : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        StartExplosion();
     }
+
+    public void BulletDestruction()
+    {
+        GameObject instance = GetComponent<Player>().GetInstanceBullet();
+        if (instance != null)
+        {
+            GetComponent<Player>().DestroyInstanceBullet();
+        }
+
+    }
+
+    public void StartExplosion()
+    {
+        myAnim.SetBool("hasCollided", true);
+    }
+
 }
 
