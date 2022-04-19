@@ -24,6 +24,7 @@ public class Bullet : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         StartExplosion();
+        Debug.Log("Colisión de Bullet");
     }
 
     public void BulletDestruction()
