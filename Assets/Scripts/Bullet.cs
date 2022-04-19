@@ -18,4 +18,10 @@ public class Bullet : MonoBehaviour
     {
         myBody.velocity = new Vector2(BulletSpeed, 0);
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
 }
+
