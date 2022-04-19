@@ -9,6 +9,10 @@ public class Player : MonoBehaviour
     Animator myAnim;
     bool IsGrounded = true;
     [SerializeField] float JumpForce;
+    [SerializeField] GameObject bullet;
+    [SerializeField] float FireRate;
+    private GameObject instanceBullet;
+    private float AllowFire;
 
 
     // Start is called before the first frame update
@@ -78,6 +82,11 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.Z))
         {
             myAnim.SetLayerWeight(1, 1);
+            if (Time.time > AllowFire)
+            {
+                instanceBullet = Instantiate(bullet, transform.position, transform.rotation);
+                AllowFire = Time.time + FireRate;
+            }
         } 
         else
         {
