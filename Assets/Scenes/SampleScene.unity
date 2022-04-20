@@ -178,6 +178,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7866847762653595648, guid: 71ad4e297c8c36d40b0ded46a5b18396, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2047353623}
+    - target: {fileID: 7866847762653595649, guid: 71ad4e297c8c36d40b0ded46a5b18396, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 2047353626}
     - target: {fileID: 7866847762733871649, guid: 71ad4e297c8c36d40b0ded46a5b18396, type: 3}
       propertyPath: m_Size.x
       value: 1.804739
@@ -4623,6 +4631,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2955071073389694144, guid: 2084a89ee1cd07b44aebc207aabd6e06, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c0bd09da4d343046b13bdbd5a8a11b7, type: 3}
     - target: {fileID: 2955071073389694150, guid: 2084a89ee1cd07b44aebc207aabd6e06, type: 3}
       propertyPath: m_RootOrder
       value: 4
