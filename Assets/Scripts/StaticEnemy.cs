@@ -25,5 +25,18 @@ public class StaticEnemy : MonoBehaviour
             Instantiate(bullet, transform.position, transform.rotation);
             allowFire = Time.time + fireRate;
         }
+
+        if (life == 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            life--;
+        }
     }
 }

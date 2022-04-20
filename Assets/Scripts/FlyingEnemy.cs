@@ -9,11 +9,13 @@ public class FlyingEnemy : MonoBehaviour
     [SerializeField] int life;
     float radius = 5f;
     AIPath myPath;
+    Animator myAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         myPath = GetComponent<AIPath>();
+        myAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,8 +24,13 @@ public class FlyingEnemy : MonoBehaviour
         ChasePlayer();
         if (life == 0)
         {
-            Destroy(gameObject);
+            myAnim.SetBool("isDead", true);
         }
+    }
+
+    public void Death()
+    {
+        Destroy(gameObject);
     }
 
     void ChasePlayer()

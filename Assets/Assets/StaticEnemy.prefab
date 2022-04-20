@@ -98,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b027bc37e4bd34eb687c9121bbbc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 0
+  life: 5
   bullet: {fileID: 1346817489384303623, guid: bcbf7a44655ff0e408bc4c89ca4c0ee4, type: 3}
+  fireRate: 1
 --- !u!50 &172663077651545441
 Rigidbody2D:
   serializedVersion: 4
@@ -115,7 +116,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
