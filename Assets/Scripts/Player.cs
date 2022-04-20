@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -11,9 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField] float JumpForce;
     [SerializeField] GameObject bullet;
     [SerializeField] float FireRate;
-    private GameObject instanceBullet;
     private float AllowFire;
     AudioSource myAudio;
+    [SerializeField] AudioClip deathSound;
 
     // Start is called before the first frame update
     void Start()
@@ -85,7 +86,7 @@ public class Player : MonoBehaviour
             myAnim.SetLayerWeight(1, 1);
             if (Time.time > AllowFire)
             {
-                instanceBullet = Instantiate(bullet, transform.position, transform.rotation);
+                Instantiate(bullet, transform.position, transform.rotation);
                 AllowFire = Time.time + FireRate;
                 myAudio.PlayOneShot(myAudio.clip);
             }
@@ -122,6 +123,13 @@ public class Player : MonoBehaviour
 
     public void GameOver()
     {
-
+        Time.timeScale = 0;
+        new WaitForSeconds(2);
+        myAudio.PlayOneShot(deathSound);
+        new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
+
+
 }
