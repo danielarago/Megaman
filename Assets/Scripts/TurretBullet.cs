@@ -18,4 +18,10 @@ public class TurretBullet : MonoBehaviour
     {
         myBody.velocity = new Vector2(bulletSpeed, 0);
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
+
 }

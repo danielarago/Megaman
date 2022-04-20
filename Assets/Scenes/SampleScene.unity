@@ -3507,11 +3507,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1805708929053356472, guid: 9ea74637f491dd0439ddb6306044f73a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.41
+      value: 2.17
       objectReference: {fileID: 0}
     - target: {fileID: 1805708929053356472, guid: 9ea74637f491dd0439ddb6306044f73a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.18
+      value: 5.65
       objectReference: {fileID: 0}
     - target: {fileID: 1805708929053356472, guid: 9ea74637f491dd0439ddb6306044f73a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3560,6 +3560,10 @@ PrefabInstance:
     - target: {fileID: 6263924010600615850, guid: 9ea74637f491dd0439ddb6306044f73a, type: 3}
       propertyPath: m_Name
       value: FlyingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6263924010600615850, guid: 9ea74637f491dd0439ddb6306044f73a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ea74637f491dd0439ddb6306044f73a, type: 3}
@@ -3618,6 +3622,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4937348127343859278, guid: 4bb7c53a76c1fb54c8c6a37c3aab3381, type: 3}
+      propertyPath: life
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4937348127343859278, guid: 4bb7c53a76c1fb54c8c6a37c3aab3381, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8168919258048472630, guid: 4bb7c53a76c1fb54c8c6a37c3aab3381, type: 3}
       propertyPath: m_Name
       value: StaticEnemy
@@ -3643,3 +3655,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 0
   bullet: {fileID: 0}
+  fireRate: 0

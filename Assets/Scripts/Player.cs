@@ -109,6 +109,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Game Over bestie");
+        }
+    }
+
     /*public GameObject GetInstanceBullet()
     {
             return instanceBullet; 
