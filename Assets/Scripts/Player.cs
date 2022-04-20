@@ -11,15 +11,16 @@ public class Player : MonoBehaviour
     [SerializeField] float JumpForce;
     [SerializeField] GameObject bullet;
     [SerializeField] float FireRate;
-    public GameObject instanceBullet;
+    private GameObject instanceBullet;
     private float AllowFire;
-
+    AudioSource myAudio;
 
     // Start is called before the first frame update
     void Start()
     {
         myBody = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
+        myAudio = GetComponent<AudioSource>();
         StartCoroutine(Corutina());
     }
 
@@ -86,6 +87,7 @@ public class Player : MonoBehaviour
             {
                 instanceBullet = Instantiate(bullet, transform.position, transform.rotation);
                 AllowFire = Time.time + FireRate;
+                myAudio.PlayOneShot(myAudio.clip);
             }
         } 
         else
