@@ -36,6 +36,7 @@ public class StaticEnemy : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Colisión con Turret");
         if (collision.gameObject.CompareTag("Bullet"))
         {
             life--;
@@ -45,5 +46,10 @@ public class StaticEnemy : MonoBehaviour
     public void Death()
     {
         Destroy(gameObject);
+    }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(transform.position, Vector2.left);
     }
 }
