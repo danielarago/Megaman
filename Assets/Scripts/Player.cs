@@ -114,6 +114,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Game Over bestie");
+            myAnim.SetBool("isDying", true);
         }
     }
 
