@@ -118,17 +118,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    /*public GameObject GetInstanceBullet()
+    public void GameOver()
     {
-            return instanceBullet; 
-    }
 
-    public void DestroyInstanceBullet()
-    {
-        GameObject BulletToDestroy = GetInstanceBullet();
-        if (BulletToDestroy != null)
-        {
-            Destroy(BulletToDestroy);
-        }
-    }*/
+    }
 }
