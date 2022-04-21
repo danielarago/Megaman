@@ -48,11 +48,13 @@ public class Player : MonoBehaviour
             myAnim.SetBool("isRunning", true);
             if (dirH < 0)
             {
-                transform.localScale = new Vector2(-1, 1);
+                transform.localScale = new Vector2(1, 1);
+                transform.eulerAngles = new Vector3(0, 180, 0);
             }
             else
             {
                 transform.localScale = new Vector2(1, 1);
+                transform.eulerAngles = new Vector3(0,0,0);
             }
         }
         else
