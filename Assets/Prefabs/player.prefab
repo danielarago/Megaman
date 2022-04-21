@@ -154,6 +154,7 @@ MonoBehaviour:
   FireRate: 1
   deathSound: {fileID: 8300000, guid: 7c0bd09da4d343046b13bdbd5a8a11b7, type: 3}
   bulletSound: {fileID: 8300000, guid: de8ba99105a32074b829672b92da72d7, type: 3}
+  bulletSource: {fileID: 2307636259706070352, guid: a2cbd90da4c888f4caf68899715d2a96, type: 3}
 --- !u!95 &2955071073389694145
 Animator:
   serializedVersion: 4

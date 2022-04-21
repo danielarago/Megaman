@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     AudioSource myAudio;
     [SerializeField] AudioClip deathSound;
     [SerializeField] AudioClip bulletSound;
+    public GameObject bulletSource;
 
     // Start is called before the first frame update
     void Start()
@@ -87,7 +88,7 @@ public class Player : MonoBehaviour
             myAnim.SetLayerWeight(1, 1);
             if (Time.time > AllowFire)
             {
-                GameObject instanceBullet = Instantiate(bullet, transform.position, transform.rotation);
+                GameObject instanceBullet = Instantiate(bullet, bulletSource.transform.position, bulletSource.transform.rotation);
                 AllowFire = Time.time + FireRate;
                 myAudio.PlayOneShot(bulletSound);
             }

@@ -40,7 +40,6 @@ public class FlyingEnemy : MonoBehaviour
 
         if (detectPlayer != null)
         {
-            Debug.Log("Jugador dentro de radio");
             myPath.isStopped = false;
         } else
         {
@@ -58,7 +57,6 @@ public class FlyingEnemy : MonoBehaviour
         GameObject collidedObject = collision.gameObject;
         if (collidedObject.CompareTag("Bullet"))
         {
-            Debug.Log("-1 a la vida de enemigo");
             life--;
         }
     }
