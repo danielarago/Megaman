@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private float AllowFire;
     AudioSource myAudio;
     [SerializeField] AudioClip deathSound;
+    [SerializeField] AudioClip bulletSound;
 
     // Start is called before the first frame update
     void Start()
@@ -88,27 +89,21 @@ public class Player : MonoBehaviour
             {
                 GameObject instanceBullet = Instantiate(bullet, transform.position, transform.rotation);
                 AllowFire = Time.time + FireRate;
-                myAudio.PlayOneShot(myAudio.clip);
+                myAudio.PlayOneShot(bulletSound);
             }
         } 
         else
         {
+            new WaitForSeconds(5);
             myAnim.SetLayerWeight(1, 0);
         }
-    }
-
-    public void FinishingRun()
-    {
-        Debug.Log("Termina de correr :3");
     }
 
     IEnumerator Corutina()
     {
         while (true)
         {
-            Debug.Log("Esperando 4 segundos");
             yield return new WaitForSeconds(4);
-            Debug.Log("Pasaron 4 segundos");
         }
     }
 
@@ -116,7 +111,6 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Game Over bestie");
             myAnim.SetBool("isDying", true);
         }
     }

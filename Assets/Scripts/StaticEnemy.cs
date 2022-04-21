@@ -36,7 +36,6 @@ public class StaticEnemy : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Colisión con Turret");
         if (collision.gameObject.CompareTag("Bullet"))
         {
             life--;

@@ -24,15 +24,12 @@ public class Bullet : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Colisión de Bullet");
         myAnim.SetBool("hasCollided", true);
     }
 
     public void BulletDestruction()
     {
-        Debug.Log("Destrucción de bala");
         Destroy(gameObject);
-
     }
 }
 
