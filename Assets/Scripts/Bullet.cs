@@ -25,7 +25,8 @@ public class Bullet : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        myAnim.SetBool("hasCollided", true);
+        myAnim.SetTrigger("death");
+        myBody.velocity = new Vector2 (0,0);
     }
 
     public void BulletDestruction()

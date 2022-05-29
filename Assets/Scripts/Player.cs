@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
         myBody = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
         myAudio = GetComponent<AudioSource>();
-        StartCoroutine(Corutina());
     }
 
     // Update is called once per frame
@@ -85,29 +84,27 @@ public class Player : MonoBehaviour
 
     void Fire()
     {
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) && Time.time >= AllowFire)
         {
+            GameObject instanceBullet = Instantiate(bullet, bulletSource.transform.position, bulletSource.transform.rotation);
+            AllowFire = Time.time + FireRate;
+            myAudio.PlayOneShot(bulletSound);
             myAnim.SetLayerWeight(1, 1);
-            if (Time.time > AllowFire)
-            {
-                GameObject instanceBullet = Instantiate(bullet, bulletSource.transform.position, bulletSource.transform.rotation);
-                AllowFire = Time.time + FireRate;
-                myAudio.PlayOneShot(bulletSound);
-            }
         } 
-        else
+        else if (Time.time > AllowFire + 0.2)
         {
-            new WaitForSeconds(5);
             myAnim.SetLayerWeight(1, 0);
         }
     }
 
     IEnumerator Corutina()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(4);
-        }
+        
+        Time.timeScale = 0;   
+        yield return new WaitForSeconds(1);
+        myAudio.PlayOneShot(deathSound);
+        yield return new WaitForSeconds(1);
+        
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -120,10 +117,7 @@ public class Player : MonoBehaviour
 
     public void GameOver()
     {
-        Time.timeScale = 0;
-        new WaitForSeconds(1);
-        myAudio.PlayOneShot(deathSound);
-        new WaitForSeconds(1);
+        StartCoroutine(Corutina());
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
