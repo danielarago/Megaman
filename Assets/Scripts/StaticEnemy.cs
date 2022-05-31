@@ -9,11 +9,14 @@ public class StaticEnemy : MonoBehaviour
     [SerializeField] float fireRate;
     float allowFire;
     Animator myAnim;
+    [SerializeField] AudioClip deathSound;
+    AudioSource myAudio;
 
     // Start is called before the first frame update
     void Start()
     {
         myAnim = GetComponent<Animator>();
+        myAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -44,7 +47,8 @@ public class StaticEnemy : MonoBehaviour
 
     public void Death()
     {
-        Destroy(gameObject);
+        myAudio.PlayOneShot(deathSound);
+        Destroy(gameObject, deathSound.length);
     }
 
     public void OnDrawGizmos()

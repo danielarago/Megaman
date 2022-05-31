@@ -10,12 +10,15 @@ public class FlyingEnemy : MonoBehaviour
     float radius = 5f;
     AIPath myPath;
     Animator myAnim;
+    [SerializeField] AudioClip deathSound;
+    AudioSource myAudio;
 
     // Start is called before the first frame update
     void Start()
     {
         myPath = GetComponent<AIPath>();
         myAnim = GetComponent<Animator>();
+        myAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,7 +33,8 @@ public class FlyingEnemy : MonoBehaviour
 
     public void Death()
     {
-        Destroy(gameObject);
+        myAudio.PlayOneShot(deathSound);
+        Destroy(gameObject, deathSound.length);
     }
 
     void ChasePlayer()

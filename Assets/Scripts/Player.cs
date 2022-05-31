@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip deathSound;
     [SerializeField] AudioClip bulletSound;
     public GameObject bulletSource;
+    [SerializeField] AudioClip jumpSound;
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +70,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 myBody.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
+                myAudio.PlayOneShot(jumpSound);
                 myAnim.SetBool("isJumping", true);
             }
         }
@@ -97,14 +99,14 @@ public class Player : MonoBehaviour
         }
     }
 
-    IEnumerator Corutina()
+    IEnumerator PlayerDeath()
     {
-        
-        Time.timeScale = 0;   
+        yield return new WaitForSeconds(deathSound.length + 1);
+    }
+
+    IEnumerator Wait1Second()
+    {
         yield return new WaitForSeconds(1);
-        myAudio.PlayOneShot(deathSound);
-        yield return new WaitForSeconds(1);
-        
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -117,8 +119,12 @@ public class Player : MonoBehaviour
 
     public void GameOver()
     {
-        StartCoroutine(Corutina());
+        Time.timeScale = 0;
+        StartCoroutine(Wait1Second());
+        myAudio.PlayOneShot(deathSound);
+        StartCoroutine(PlayerDeath());
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        StopAllCoroutines();
         Time.timeScale = 1;
     }
 
