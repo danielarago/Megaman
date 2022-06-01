@@ -1,0 +1,19 @@
+.my-btn {
+    height: 45px;
+    width: 223px;
+    background-color: rgba(222, 145, 38, 0.96);
+    font-size: 20px;
+    -unity-font: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=a2f67c81cf1025b4c932aaa582620e75&type=3#NotInter-Regular');
+    -unity-font-style: normal;
+    margin-bottom: 6px;
+}
+
+.my-btn:hover {
+    height: 45px;
+    width: 223px;
+    background-color: rgba(224, 182, 16, 0.96);
+    font-size: 20px;
+    -unity-font: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=a2f67c81cf1025b4c932aaa582620e75&type=3#NotInter-Regular');
+    -unity-font-style: normal;
+    margin-bottom: 6px;
+}

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/UI%20Toolkit/Imagen.jpeg?fileID=2800000&amp;guid=0693d516017859e4d90f93cb9298d24b&amp;type=3#Imagen&apos;); background-color: rgba(196, 196, 196, 255);">
+        <ui:VisualElement style="background-color: rgba(10, 0, 0, 0); height: 100%; width: 100%; align-items: flex-end; justify-content: flex-end; display: flex; background-image: none;">
+            <ui:VisualElement style="height: 94px; width: 194px; -unity-background-image-tint-color: rgba(255, 255, 255, 0.62); background-color: rgba(255, 255, 255, 0); align-items: flex-start; justify-content: center; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+                <ui:Label display-tooltip-when-elided="true" name="msg-txt" style="-unity-background-image-tint-color: rgb(10, 9, 9); color: rgb(12, 8, 8); justify-content: center; display: none;" />
+            </ui:VisualElement>
+            <ui:Button text="START GAME" display-tooltip-when-elided="true" name="start-btn" class="my-btn" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; -unity-background-image-tint-color: rgb(209, 46, 46); height: 100px; width: 300px; background-color: rgb(233, 248, 7); -unity-font-style: bold; font-size: 30px; color: rgb(116, 47, 202); -unity-text-align: middle-center; -unity-text-outline-color: rgb(91, 24, 99); -unity-text-outline-width: 1px; text-shadow: 0 0 3px rgb(15, 17, 16); letter-spacing: 5px; word-spacing: 20px;" />
+        </ui:VisualElement>
+        <ui:Label text="Por: Daniela Ramirez y Camilo Diaz" display-tooltip-when-elided="true" style="color: rgb(248, 235, 235); font-size: 40px; justify-content: center; align-items: stretch; height: 50px; width: 688px; background-color: rgba(0, 0, 0, 0);" />
+    </ui:VisualElement>
+</ui:UXML>

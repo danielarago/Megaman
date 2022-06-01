@@ -398,7 +398,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 09c874f91c0583041be7e5c5b929b01c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1525,6 +1525,8 @@ PolygonCollider2D:
       - {x: -25.80116, y: 11.752514}
       - {x: -25.846252, y: -15.794357}
       - {x: 45.719864, y: -15.702546}
+      - {x: 100.27103, y: -15.966357}
+      - {x: 100.12221, y: 11.862714}
       - {x: 45.912586, y: 11.564739}
       - {x: 28.10733, y: 11.854576}
 --- !u!1001 &1172400127
@@ -6257,7 +6259,7 @@ GameObject:
   - component: {fileID: 1826526398}
   - component: {fileID: 1826526400}
   m_Layer: 5
-  m_Name: UIDocument
+  m_Name: UI Conteo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6306,6 +6308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bbbd57353c93f42959eef1dab92095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pantallaFinal: {fileID: 0}
 --- !u!1 &1917637314
 GameObject:
   m_ObjectHideFlags: 0
