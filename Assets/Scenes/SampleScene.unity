@@ -333,7 +333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.040089, y: 1.5374699, z: -10}
+  m_LocalPosition: {x: -8.040107, y: 1.5374699, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6277,7 +6277,7 @@ MonoBehaviour:
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PanelSettings: {fileID: 11400000, guid: 517333284f8651844842da2bd0724568, type: 2}
+  m_PanelSettings: {fileID: 11400000, guid: 77208bd54f460374faf01d4c585abb34, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 1cc65eeff46f2ce46889b6244547a537, type: 3}
   m_SortingOrder: 0
@@ -6308,7 +6308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bbbd57353c93f42959eef1dab92095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pantallaFinal: {fileID: 0}
 --- !u!1 &1917637314
 GameObject:
   m_ObjectHideFlags: 0
